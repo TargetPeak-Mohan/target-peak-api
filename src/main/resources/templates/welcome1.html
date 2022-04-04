@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="UTF-8" />
+      <title>Person List</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+   </head>
+   <body>
+      <h1>Person List</h1>
+      <a href="addPerson">Add Person</a>
+      <br/><br/>
+      <div>
+         <table border="1">
+            <tr>
+               <th>ID</th>
+               <th>ENVIRONMENT</th>
+            </tr>
+            <tr th:each ="versionholder : ${versionHolders}">
+               <td th:utext="${versionholder.AppVersionId}">...</td>
+               <td th:utext="${versionholder.VersionNo}">...</td>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,229 @@
+.btn-theme-blue {
+    color: #fff;
+    background-color: #303e9f;
+    border-color: #303e9f
+}
+
+.btn-theme-blue:hover {
+    color: #fff;
+    background-color: #26357a;
+    border-color: #213168
+}
+
+.btn-check:focus+.btn-theme-blue,
+.btn-theme-blue:focus {
+    color: #fff;
+    background-color: #26357a;
+    border-color: #213168;
+    box-shadow: 0 0 0 .25rem rgba(66, 93, 188, .5)
+}
+
+.btn-check:active+.btn-theme-blue,
+.btn-check:checked+.btn-theme-blue,
+.btn-theme-blue.active,
+.btn-theme-blue:active,
+.show>.btn-theme-blue.dropdown-toggle {
+    color: #fff;
+    background-color: #213168;
+    border-color: #1d2c59
+}
+
+.btn-check:active+.btn-theme-blue:focus,
+.btn-check:checked+.btn-theme-blue:focus,
+.btn-theme-blue.active:focus,
+.btn-theme-blue:active:focus,
+.show>.btn-theme-blue.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .25rem rgba(66, 93, 188, .5)
+}
+
+.btn-theme-blue.disabled,
+.btn-theme-blue:disabled {
+    color: #fff;
+    background-color: #303e9f;
+    border-color: #303e9f
+}
+
+.theme-blue.form-control:focus {
+    border-color: #303e9f;
+    box-shadow: 0 0 0 0.25rem rgb(66 93 188 / 25%);
+}
+
+.br-025rem {
+    border-radius: 0.25rem;
+}
+
+.login-content-heading {
+    margin-bottom: 2rem;
+}
+
+.login {
+    padding: 3rem;
+}
+
+.login-logo {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.login-logo img {
+    width: 80%;
+}
+
+.parsley-errors-list {
+    list-style: none;
+    padding: 0;
+    font-size: .775rem;
+    color: #e6180d;
+}
+
+.parsley-errors-list li {
+    padding: 0.25rem 0;
+}
+
+.custom-input-error {
+    padding: 0.25rem 0;
+    font-size: .775rem;
+    color: #e6180d;
+}
+
+.question-paper-image-gallery {
+    position: relative;
+}
+
+.question-paper-image-gallery-inner {
+    position: fixed;
+    height: 100vh;
+    overflow-y: scroll;
+    width: 11.5%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.question-paper-image-gallery-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.question-paper-image-gallery ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.question-paper-image-gallery ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.question-paper-image-gallery ul li:last-child {
+    margin-bottom: 150px;
+}
+
+.question-paper-image-gallery ul li .img-block {
+    border: 1px solid #e2e2e2;
+    overflow: hidden;
+}
+
+.question-paper-image-gallery ul li .img-block.copied {
+    border: 2px solid #7b7b7b;
+}
+
+.question-paper-image-gallery ul li img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background: #fff;
+    cursor: pointer;
+}
+
+.question-paper-image-gallery ul li .overlay-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgb(0 0 0 / 50%);
+    text-align: center;
+    color: #fff;
+    font-size: smaller;
+    padding: 0.25rem 0;
+}
+
+.table-row {
+    cursor: pointer;
+}
+
+.subscription-plan-block {
+    background: #fff;
+    padding: 25px;
+}
+
+.subscription-plan-block-pricing {
+    padding: 15px 0;
+}
+
+.subscription-plan-block-pricing h5 {
+    margin: 0;
+    color: #a9acbf;
+    text-decoration: line-through;
+}
+
+.subscription-plan-block-pricing h1 {
+    color: #484848;
+}
+
+.subscription-plan-block-pricing h1 span {
+    font-size: 18px;
+    color: #a9acbf;
+}
+
+.subscription-plan-block-sub-heading {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    background: #e6e9ff;
+    padding: 5px 5px;
+}
+
+.subscription-plan-block-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.subscription-plan-block-features ul li {
+    border-bottom: 1px solid #dedede;
+    padding: 10px 0;
+}
+
+.subscription-plan-block-features ul li:last-child {
+    border-bottom: none;
+}
+
+.subscription-plan-block-exam-schedule ul {
+    list-style: none;
+    padding: 0;
+}
+
+.subscription-plan-block-exam-schedule ul li {
+    border-bottom: 1px solid #dedede;
+    padding: 10px 0;
+}
+
+.subscription-plan-block-exam-schedule ul li:last-child {
+    border-bottom: none;
+}
+
+.subscription-plan-block-exam-schedule ul li p {
+    margin: 0;
+}
+
+.subscription-plan-block-exam-schedule ul li b {
+    color: #a9acbf;
+}
+
+.subscription-plan-block-exam-schedule ul li p span {
+    font-weight: 500;
+    color: #696969;
+    display: inline-block;
+    width: 70px;
+}
+

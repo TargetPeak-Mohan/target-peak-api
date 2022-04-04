@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- <!-- <link th:href="@{http://fonts.googleapis.com/css?family=Calibri}"
+	rel='stylesheet' type='text/css' /> -->
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<section class="single-result-section" style="padding-top: 4rem">
+
+		<div class="institute-name text-center mb-5">
+			<img src="https://revoeducation.in/0.0.6/assets/img/mvp.jpg" alt="MVP"
+				width="80" height="80">
+			<h4 class="mb-2">
+				<b><span th:text="${instituteName}"></span></b>
+
+			</h4>
+
+			<h5>
+				<b>Academic Year : 2021 - 2022</b>
+			</h5>
+		</div>
+
+
+
+		<!-- FIRST TABLE -->
+		<div class="container" style="padding-top: 2rem">
+			<div class="table-responsive">
+				<table class="table table-bordered border-dark">
+					<thead>
+
+
+						<tr>
+							<th width="10%">Name</th>
+							<td th:text="${studentName}"></td>
+
+							<th width="20%">Mother's Name</th>
+							<td th:text="${motherName}"></td>
+
+							<th width="10%">Gender</th>
+							<td th:text="${gender}"></td>
+						</tr>
+
+						<tr>
+							<th>Class</th>
+							<td th:text="${className}"></td>
+
+							<th>Division</th>
+							<td th:text="${divisionName}"></td>
+
+							<th>Date</th>
+							<td>07<sup>th</sup> Feb 2022
+							</td>
+
+						</tr>
+
+
+					</thead>
+				</table>
+			</div>
+		</div>
+
+
+		<!-- SECOND TABLE -->
+		<div class="container" style="padding-top: 1rem">
+			<div class="table-responsive">
+				<!--TITLES  -->
+				<table class="table table-bordered border-dark">
+					<thead>
+						<tr>
+							<th width="10%">Sr.No</th>
+							<th width="22%">Subject</th>
+							<th width="22%">Maximum Marks</th>
+							<th width="22%">Obtained Marks</th>
+							<th width="22%">In Words</th>
+						</tr>
+					</thead>
+
+					<!--VALUES  -->
+					<tbody>
+						<tr th:each="examResultUiHolder : ${examResultUiHolders}">
+							<td th:utext="${examResultUiHolder.serialNo}">...</td>
+							<td th:utext="${examResultUiHolder.subjectName}">...</td>
+							<td th:utext="${examResultUiHolder.maxMarks}">...</td>
+							<td th:utext="${examResultUiHolder.obtainedMarks}">...</td>
+							<td th:utext="${examResultUiHolder.obtainedInWords}">...</td>
+						</tr>
+					</tbody>
+
+					<thead>
+						<tr>
+							<!-- <th scope="row">5</th> -->
+							<th colspan="2" style="text-align: center"><b>Total</b></th>
+							<th th:text="${maximumMarks}"><b></b></th>
+							<th th:text="${obtainedMarks}"><b></b></th>
+							<th th:text="${obtainedMarksInWords}"><b></b></th>
+						</tr>
+					</thead>
+
+
+
+
+
+				</table>
+			</div>
+		</div>
+
+
+		<!-- THIRD TABLE START-->
+		<div class="container" style="padding-top: 1rem">
+			<div class="table-responsive">
+				<!--TITLES  -->
+				<table class="table table-bordered border-dark">
+						<thead>
+							<tr>
+								<th width="10%">Percentage</th>
+								<td th:text="${percentage}"></td>
+	
+								<th width="20%">Result</th>
+								<td th:text="${result}"></td>
+							</tr>
+						</thead>
+				</table>
+			</div>
+		</div>
+		<!-- THIRD TABLE END-->
+		
+		
+		<!-- FOURTH TABLE START-->
+		<div class="container" style="padding-top: 4rem">
+			<div class="table table-striped table-borderless">
+				<!--TITLES  -->
+				<table class="table borderless" s>
+						<thead>
+							<tr>
+								<th width="50%" style="text-align: center">Class Teacher</th>
+								
+								<th width="50%" style="text-align: center">Principal</th>
+								
+							</tr>
+						</thead>
+				</table>
+			</div>
+		</div>
+		<!-- FOURTH TABLE END-->
+		
+		<h6>** This is computer generated result No need of signatures.(v4.1.2) </h6>
+		
+		
+		
+		
+	</section>
+
+
+</body>
+</html>

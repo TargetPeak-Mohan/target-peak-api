@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href="../static/css/mobile.css" th:href="@{/css/mobile.css}"
+	rel="stylesheet" />
+</head>
+
+<style type="text/css">
+.image-wrapper {
+	max-width: 50%;
+}
+
+.scale-image {
+	width: 100%;
+	height: auto;
+}
+
+.flex-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+</style>
+
+<body style="margin: 12px; padding: 12px">
+
+
+	<div class="container">
+
+		<section class="temp_certificate-header">
+
+			<table class="table table-borderless">
+				<thead>
+					<tr>
+						<th width="20%" align="center"><a href="http://www.drogies-test.de/"><img
+						src="https://play-lh.googleusercontent.com/f77yNc78U3LRZOflrp2BYs6uRrppVpNlDZjBkKXX9hd-bRTMst_iEw8en0YdguufIozg"
+						align="left" width="120" height="100"></a></th>
+						<th width="60%" style="text-align: center; vertical-align: middle;">
+						
+						<div><h3><b>Provisional Certificate of Participation</b></h3></div>  
+						
+						<!-- region test -->
+						<!-- <div class="institute-name text-center mb-5">
+						This is to certify that <b><a th:text="${studentName}"
+					style="color: black;"></a></b> Class <b><a th:text="${className}"
+					style="color: black;"></a></b> Division <b><a
+					th:text="${divisionName}" style="color: black;"></a></b> from
+				<p>
+					<b><a th:text="${instituteName}" style="color: black;"></a></b>
+					District <b><a th:text="${districtName}" style="color: black;"></a></b>
+					State <b><a th:text="${stateName}" style="color: black;"></a></b>
+				</p>
+
+				<p>
+					participated in the TARGET PEAK project held during academic year <b>2021-2022</b>
+				</p>
+			</div> -->
+						<!-- region test -->
+						
+						</th>
+						<th width="20%"><a href="http://www.theater-osnabrueck.de/" target="_blank"><img
+						src="https://revoeducation.in/0.0.6/assets/img/mvp.jpg"
+						align="right" width="120" height="100"></a></th>
+
+					</tr>
+				</thead>
+			</table>
+
+		</section>
+
+
+		<!-- <section class="certificate-header">
+
+			<div class="flex-wrapper">
+				<div class="image-wrapper">
+					<a href="http://www.drogies-test.de/"><img
+						src="https://revoeducation.in/assets/img/bg/logo-normal.png"
+						align="left" width="100" height="40"></a>
+				</div>
+
+				<div class="image-wrapper">
+					<a href="http://www.theater-osnabrueck.de/" target="_blank"><img
+						src="https://revoeducation.in/0.0.6/assets/img/mvp.jpg"
+						align="right" width="40" height="40"></a>
+				</div>
+			</div>
+
+
+			<div class="institute-name text-center mb-5">
+				<h3>
+					<b>Certificate of Participation</b>
+					<b>Provisional Certificate of Participation</b>
+				</h3>
+			</div>
+
+		</section> -->
+
+
+		<!-- <section class="certificate-middle">
+			<div class="institute-name text-center mb-5">
+				This is to certify that <b><a th:text="${studentName}"
+					style="color: black;"></a></b> Class <b><a th:text="${className}"
+					style="color: black;"></a></b> Division <b><a
+					th:text="${divisionName}" style="color: black;"></a></b> from
+				<p>
+					<b><a th:text="${instituteName}" style="color: black;"></a></b>
+					District <b><a th:text="${districtName}" style="color: black;"></a></b>
+					State <b><a th:text="${stateName}" style="color: black;"></a></b>
+				</p>
+
+				<p>
+					participated in the TARGET PEAK project held during academic year <b>2021-2022</b>
+				</p>
+			</div>
+
+
+
+		</section> -->
+		
+		
+		<section class="certificate-middle">
+			<div class="container">
+				This is to certify that <b><a th:text="${studentName}"
+					style="color: black;"></a></b> Class <b><a th:text="${className}"
+					style="color: black;"></a></b> Division <b><a
+					th:text="${divisionName}" style="color: black;"></a></b> from 
+					<b><a th:text="${instituteName}" style="color: black;"></a></b>
+				<p>
+					
+					District <b><a th:text="${districtName}" style="color: black;"></a></b>
+					State <b><a th:text="${stateName}" style="color: black;"></a></b>
+					 participated in the TARGET PEAK project held during Academic Year <b>2021-2022</b>
+				</p>
+
+				<p>
+					
+				</p>
+			</div>
+
+
+
+		</section>
+		
+
+
+		<section class="certificate-table">
+			<div class="container">
+				<div class="table-responsive">
+					<table class="table table-bordered border-dark">
+						<colgroup span="2"></colgroup>
+						<colgroup span="2"></colgroup>
+						<thead>
+
+
+
+							<!-- <tr>
+								<th colspan="2">Total MCQ's of 8 PEAK Exams</th>
+								<th width="6%" th:text="${totalQuestions}"/>
+								<th width="6%" colspan="2">Maximum Score</th>
+								<th width="6%">1000</th>
+								<th width="6%" colspan="2">Minimum Score</th>
+								<th width="6%">0</th>
+								<th colspan="3" width="6%">Total Students</th>
+								<th width="6%" th:text="${totalStudents}"/>
+							</tr> -->
+
+							<tr>
+								<th colspan="3">Total No of MCQ's (8 PEAK Exams)</th>
+								<th th:text="${totalQuestions}" />
+								<th colspan="2">Maximum Score</th>
+								<th>1000</th>
+								<!-- <th  colspan="2">Minimum Score</th>
+								<th >0</th> -->
+								<th colspan="2">Total Students</th>
+								<th th:text="${totalStudents}" />
+							</tr>
+
+							<th rowspan="2">PEAK Exams</th>
+
+
+							<!-- <th rowspan="2" width="6%">Right Attempts</th>
+							<td th:text="${Right Attempts}"></td>
+
+
+							<th rowspan="2" width="6%">Wrong Attempted</th>
+							<th rowspan="2" width="6%">Not Attempted</th> -->
+
+
+							<!-- <th colspan="4" style="text-align: center">Attempted</th> -->
+
+							<th rowspan="2">My Score</th>
+
+
+							<th colspan="4" style="text-align: center">My Rank in</th>
+							<th colspan="4" style="text-align: center">Top Score in</th>
+							</th>
+
+							<tr>
+								<!-- <th>Right</th>
+								<th>Wrong</th>
+								<th>Not</th> -->
+
+								<th>Institute</th>
+								<th>Sanstha</th>
+								<th>District</th>
+								<th>State</th>
+								<th>Institute</th>
+								<th>Sanstha</th>
+								<th>District</th>
+								<th>State</th>
+							</tr>
+
+							<tr>
+								<th>PEAK 1</th>
+
+								<!-- <td> RA </td>
+								<td> WA </td>
+								<td> NA </td> -->
+
+								<!-- <td> *# </td>
+								<td> *# </td>
+								<td> *# </td> -->
+
+								<td th:text="${Peak1_Score}" />
+								<td th:text="${Peak1_InstituteRank}" />
+								<td th:text="${Peak1_SansthaRank}" />
+								<td th:text="${Peak1_DistrictRank}" />
+								<td th:text="${Peak1_StateRank}" />
+
+
+								<td th:text="${Peak1_InstituteMaxScore}" />
+								<td th:text="${Peak1_SansthaMaxScore}" />
+								<td th:text="${Peak1_SansthaMaxScore}" />
+								<td th:text="${Peak1_MaxScore}" />
+							</tr>
+
+							<t r>
+							<th>PEAK 2</th>
+
+							<!-- <td> RA </td>
+								<td> WA </td>
+								<td> NA </td> --> <!-- <td> *# </td>
+								<td> *# </td>
+								<td> *# </td> -->
+
+							<td th:text="${Peak2_Score}" />
+							<td th:text="${Peak2_InstituteRank}" />
+							<td th:text="${Peak2_SansthaRank}" />
+							<td th:text="${Peak2_DistrictRank}" />
+							<td th:text="${Peak2_StateRank}" />
+
+							<td th:text="${Peak2_InstituteMaxScore}" />
+							<td th:text="${Peak2_SansthaMaxScore}" />
+							<td th:text="${Peak2_SansthaMaxScore}" />
+							<td th:text="${Peak2_MaxScore}" />
+							</tr>
+
+							<tr>
+								<th>PEAK 3</th>
+
+								<!-- <td> RA </td>
+								<td> WA </td>
+								<td> NA </td> -->
+
+								<!-- <td> *# </td>
+								<td> *# </td>
+								<td> *# </td> -->
+
+								<td th:text="${Peak3_Score}" />
+								<td th:text="${Peak3_InstituteRank}" />
+								<td th:text="${Peak3_SansthaRank}" />
+								<td th:text="${Peak3_DistrictRank}" />
+								<td th:text="${Peak3_StateRank}" />
+
+								<td th:text="${Peak3_InstituteMaxScore}" />
+								<td th:text="${Peak3_SansthaMaxScore}" />
+								<td th:text="${Peak3_SansthaMaxScore}" />
+								<td th:text="${Peak3_MaxScore}" />
+							</tr>
+
+							<tr>
+								<th>PEAK 4</th>
+
+								<!-- <td> RA </td>
+								<td> WA </td>
+								<td> NA </td> -->
+
+								<!-- <td> *# </td>
+								<td> *# </td>
+								<td> *# </td> -->
+
+								<td th:text="${Peak4_Score}" />
+								<td th:text="${Peak4_InstituteRank}" />
+								<td th:text="${Peak4_SansthaRank}" />
+								<td th:text="${Peak4_DistrictRank}" />
+								<td th:text="${Peak4_StateRank}" />
+
+								<td th:text="${Peak4_InstituteMaxScore}" />
+								<td th:text="${Peak4_SansthaMaxScore}" />
+								<td th:text="${Peak4_SansthaMaxScore}" />
+								<td th:text="${Peak4_MaxScore}" />
+							</tr>
+
+							<tr>
+								<th>PEAK 5</th>
+
+								<!-- <td> RA </td>
+								<td> WA </td>
+								<td> NA </td> -->
+
+								<!-- <td> *# </td>
+								<td> *# </td>
+								<td> *# </td> -->
+
+								<td th:text="${Peak5_Score}" />
+								<td th:text="${Peak5_InstituteRank}" />
+								<td th:text="${Peak5_SansthaRank}" />
+								<td th:text="${Peak5_DistrictRank}" />
+								<td th:text="${Peak5_StateRank}" />
+
+								<td th:text="${Peak5_InstituteMaxScore}" />
+								<td th:text="${Peak5_SansthaMaxScore}" />
+								<td th:text="${Peak5_SansthaMaxScore}" />
+								<td th:text="${Peak5_MaxScore}" />
+							</tr>
+
+							<tr>
+								<th>PEAK 6</th>
+
+								<!-- <td> RA </td>
+								<td> WA </td>
+								<td> NA </td> -->
+
+								<!-- <td> *# </td>
+								<td> *# </td>
+								<td> *# </td> -->
+
+								<td th:text="${Peak6_Score}" />
+								<td th:text="${Peak6_InstituteRank}" />
+								<td th:text="${Peak6_SansthaRank}" />
+								<td th:text="${Peak6_DistrictRank}" />
+								<td th:text="${Peak6_StateRank}" />
+
+								<td th:text="${Peak6_InstituteMaxScore}" />
+								<td th:text="${Peak6_SansthaMaxScore}" />
+								<td th:text="${Peak6_SansthaMaxScore}" />
+								<td th:text="${Peak6_MaxScore}" />
+
+							</tr>
+
+
+							<tr>
+								<th>PEAK 7</th>
+
+								<!-- <td> RA </td>
+								<td> WA </td>
+								<td> NA </td> -->
+
+								<!-- <td> *# </td>
+								<td> *# </td>
+								<td> *# </td> -->
+
+								<td th:text="${Peak7_Score}" />
+								<td th:text="${Peak7_InstituteRank}" />
+								<td th:text="${Peak7_SansthaRank}" />
+								<td th:text="${Peak7_DistrictRank}" />
+								<td th:text="${Peak7_StateRank}" />
+
+								<td th:text="${Peak7_InstituteMaxScore}" />
+								<td th:text="${Peak7_SansthaMaxScore}" />
+								<td th:text="${Peak7_SansthaMaxScore}" />
+								<td th:text="${Peak7_MaxScore}" />
+							</tr>
+
+							<tr>
+								<th>PEAK 8</th>
+
+								<!-- <td> RA </td>
+								<td> WA </td>
+								<td> NA </td> -->
+
+								<!-- <td> *# </td>
+								<td> *# </td>
+								<td> *# </td> -->
+
+								<td th:text="${Peak8_Score}" />
+								<td th:text="${Peak8_InstituteRank}" />
+								<td th:text="${Peak8_SansthaRank}" />
+								<td th:text="${Peak8_DistrictRank}" />
+								<td th:text="${Peak8_StateRank}" />
+
+								<td th:text="${Peak8_InstituteMaxScore}" />
+								<td th:text="${Peak8_SansthaMaxScore}" />
+								<td th:text="${Peak8_SansthaMaxScore}" />
+								<td th:text="${Peak8_MaxScore}" />
+							</tr>
+
+							<!-- <tr>
+								<th>Average</th>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>
+							</tr> -->
+						</thead>
+
+					</table>
+				</div>
+			</div>
+
+
+		</section>
+
+
+		<section class="certificate-footer">
+			<div class="container" style="padding-top: 20px">
+				<!-- <p>
+					This certification is awarded for the participation of Target PEAK project
+				</p> 
+				<p>
+					and awarded Gold/Silver/Bronze medal for performance excellence at Institute/District/Sanstha level
+				</p> -->
+
+				<p>This provisional certification is awarded for the
+					participation of Target PEAK project</p>
+				<p>final certificate will be display in the first week of April
+					2022</p>
+
+			</div>
+		</section>
+
+		<section class="certificate-timestamp">
+			<div class="container" style="padding-top: 20px">
+
+				<h6>
+					*v1.0.1 | generated on <a th:text="${timestamp}"></a>
+				</h6>
+			</div>
+		</section>
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

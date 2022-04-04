@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="../static/css/mobile.css" th:href="@{/css/mobile.css}"
+	rel="stylesheet" />
+</head>
+<body style="margin: 4px; padding: 4px">
+
+	<!-- Title : Exam Paper Name -->
+	<div class="institute-name text-center mb-5">
+		<img src="https://revoeducation.in/0.0.6/assets/img/mvp.jpg" alt="MVP"
+			width="80" height="80">
+		<h5 class="mb-2">
+			<b><span th:text="${instituteName}"></span></b>
+
+		</h5>
+
+		<h6>
+			<b>Academic Year : 2021 - 2022</b>
+		</h6>
+
+		<h6>
+			<b><span th:text="${className}"></span></b>
+		</h6>
+	</div>
+
+
+	<div th:switch="${studentRegularResultDetails}"
+		style="margin: 4px; padding: 4px">
+		<h2 th:case="null">No Data Available!</h2>
+		<div th:case="*">
+			<table class="table table table-bordered">
+				<thead>
+					<tr>
+						<th width="5%">RollNo</th>
+						<th width="50%">StudentName</th>
+						<th width="50%">Subjects</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr
+						th:each="studentRegularResultDetail : ${studentRegularResultDetails}">
+
+						<td>
+							<table
+								style='font-size: 70%'>
+								<tr>
+									<td th:text="${studentRegularResultDetail.rollNo} "></td>
+								</tr>
+							</table>
+						</td>
+
+
+						<td>
+							<table
+								style='font-size: 70%'>
+
+								<tr>
+									<td th:text="${studentRegularResultDetail.studentName}"></td>
+								</tr>
+
+								<tr>
+									<td
+										th:text="'Obtained Marks:'+${studentRegularResultDetail.obtainedMarks}+'/'+${studentRegularResultDetail.maximumMarks}"></td>
+
+								</tr>
+
+								<tr>
+									<td
+										th:text="'Percentage:'+${studentRegularResultDetail.percentage}"></td>
+								</tr>
+
+								<tr>
+									<td style="font-weight: bold"
+										th:text="'Result:'+${studentRegularResultDetail.result}"></td>
+								</tr>
+
+							</table>
+
+						</td>
+						<td>
+							<table
+								style='font-size: 60%'>
+								<tr
+									th:each="studentPaperResultDetail : ${studentRegularResultDetail.studentPaperResultDetails}">
+									<td th:text="${studentPaperResultDetail.paperName}+'-'"></td>
+									<td
+										th:text="${studentPaperResultDetail.examScore} ? ${studentPaperResultDetail.examScore} : '' "></td>
+									<td
+										th:text="${studentPaperResultDetail.examScore!=null and !studentPaperResultDetail.examScore.empty} ? '/' : '' "></td>
+									<td
+										th:text="${studentPaperResultDetail.maxMarks} ? ${studentPaperResultDetail.maxMarks} : '' "></td>
+									<!-- <td
+										th:text="${studentPaperResultDetail.examScore}+'/'+${studentPaperResultDetail.maxMarks}"></td> -->
+								</tr>
+							</table>
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+
+
+
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
+
+

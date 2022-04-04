@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Result-Single</title>
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+    <link href="../static/css/app.min.css" th:href="@{/css/app.min.css}" rel="stylesheet" />
+    <link href="../static/css/vendor.min.css" th:href="@{/css/vendor.min.css}" rel="stylesheet" />
+    <link href="../static/plugins/bootstrap-table/dist/bootstrap-table.min.css" th:href="@{/plugins/bootstrap-table/dist/bootstrap-table.min.css}" rel="stylesheet" />
+    <link href="../static/plugins/bootstrap-table/dist/bootstrap-table.min.js" th:href="@{/plugins/bootstrap-table/dist/bootstrap-table.min.js}" />
+    <link href="../static/plugins/summernote/dist/summernote-lite.css" th:href="@{/plugins/summernote/dist/summernote-lite.css}" rel="stylesheet" />
+  
+    
+</head>
+<body>
+
+
+<section class="single-result-section" style="padding-top: 4rem">
+    <div class="container">
+        <div class="result-header">
+            
+            <div class="institute-name text-center mb-5">
+                <h4 class="mb-2">Institute Name</h4>
+                <p class="mb-0">Address ----------- ----------- ----------- ----------- </p>
+                <p>NAAC Accredited "A++" Grade (CGPA -----)</p>
+            </div>
+
+            
+            <p class="text-end"><b>Date:</b> 04<sup>th</sup> December 2021</p>
+            <div class="table table-responsive">
+                <table class="table table-bordered border-dark">
+                    <tr>
+                        <th >Academic Year</th>
+                        <td >2021 - 2022</td>    
+
+                        <th >Class</th>
+                        <td >ClassName</td>
+
+                        <th >Lanugage</th>
+                        <td >English</td>
+                        <!-- <th>Examintation</th>
+                        <td>November - 2021</td> -->
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <td>StudentName</td>
+
+                        <th>Mother's Name</th>
+                        <td>MothersName</td>
+
+                        <th>Gender</th>
+                        <td>Gender</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <hr>
+
+        <div class="table table-responsive">
+            <table class="table table-bordered border-dark">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th></th>
+                        <th>Maximum Marks</th>
+                        <th>Obtained Marks</th>
+                        <th>Inwords</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td class="text-capitalize">SubjectName</td>
+                        <td>TotalQuestions</td>
+                        <td>ExamScore</td>
+                        <td class="text-capitalize">ExamScore</td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2" class="text-end">Total</th>
+                        <th>maxMarks</th>
+                        <th>obtained marks</th>
+                        <th class="text-capitalize">obtainedMark> Marks</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <hr>
+        
+        <div class="result-footer">
+            <div class="row">
+                <div class="col-md-4">
+                    <p><b>Percentage :</b> 100%</p>
+                </div>
+                <div class="col-md-4">
+                    <p><b>Maximum Marks :</b> 150</p>
+                </div>
+                <div class="col-md-4">
+                    <p><b>Obtained Marks :</b> 100</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="text-capitalize"><b>Total Marks Obtained</b></p>
+                </div>
+                <div class="col-md-4">
+                    <p><b>Result :</b>
+                       
+                       200
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+</body>
+</html>

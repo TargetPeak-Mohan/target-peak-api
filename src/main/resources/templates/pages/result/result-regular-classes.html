@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="../static/css/mobile.css" th:href="@{/css/mobile.css}"
+	rel="stylesheet" />
+<title>Classes</title>
+</head>
+
+<body>
+
+
+	<div style="padding-top: 1rem">
+
+		<!-- <div>
+			<h4>
+				<b><span th:text="${instituteName}"></span> </b>
+			</h4>
+		</div> -->
+
+		<div th:switch="${selectedClassHolders}">
+			<h4 th:case="null">No Classes Available!</h4>
+			<div th:case="*">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Class Name</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="selectedClassHolder: ${selectedClassHolders}">
+							<td th:text="${selectedClassHolder.ClassName}"></td>
+							<td><a th:href="@{/web/exam/regular/divisions?action=1(organizationId=${organizationId},instituteId=${InstituteId},instituteName=${instituteName},
+							classId=${selectedClassHolder.ClassId},className=${selectedClassHolder.ClassName} )}">Click here</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

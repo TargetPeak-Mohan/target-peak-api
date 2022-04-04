@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- <link href="../static/css/mobile.css" th:href="@{/css/mobile.css}"
+	rel="stylesheet" /> -->
+	
+	<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	
+	
+</head>
+<body style="margin: 4px; padding: 4px">
+
+
+
+	<div th:switch="${dashboardExaminationHolders}"
+		style="margin: 4px; padding: 4px">
+		<h2 th:case="null">No Data Available!</h2>
+		<div th:case="*">
+
+
+		<div class="table-responsive">
+		
+		<table class="table table table-bordered">
+				<thead>
+					<tr>
+						<th width="2%"></th>
+						<th width="40%">Examination Name</th>
+						<th width="20%">Single Attempt</th>
+						<th width="20%">Multiple Attempts</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr
+						th:each="dashboardExaminationHolder : ${dashboardExaminationHolders}">
+						<td>#</td> 
+				
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<td>
+							<!-- th:href="@{'/dashboard/getPeakExaminationsPaperList?examinationId=' + ${dashboardExaminationHolder.ExaminationId}}" -->
+							<!-- <div> --> 
+							<b> <a	th:text="${dashboardExaminationHolder.ExamName}+' - '"></a></b> 
+							
+							<button class="btn btn-primary btn-sm dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#demo">Select Organization</button>
+
+							<div id="demo" class="collapse" style="padding: 8px">
+								<a th:href="@{'/dashboard/getPeakExaminationsPaperList?examinationId=' + ${dashboardExaminationHolder.ExaminationId} + '&organizationId='+ ${organizationHolder.OrganizationId}} " th:each="organizationHolder : ${organizationHolders}"> 
+								<span	class="badge rounded-pill bg-success"	th:text="${organizationHolder.OrganizationAlias}">MVP</span> 
+								</a>
+							</div>
+						
+					
+						
+
+						
+						<!-- ******* TESTING CODE ********  -->
+						
+						
+						
+						<!-- ******* TESTING CODE ********  -->
+						
+						
+						
+							
+							
+							<!-- ******* WORIING CODE ********  -->
+						
+								<!-- <a th:each="organizationHolder : ${organizationHolders}"> 
+								<span	class="badge rounded-pill bg-secondary"	th:text="${organizationHolder.OrganizationAlias}">MVP</span> 
+								</a> -->
+									
+							<!-- ******* WORIING CODE ********  -->
+									
+								
+
+							
+							<!-- ******* OLD ONE ********  -->
+							
+							<!-- <a th:href="@{'/dashboard/getPeakExaminationsPaperList?examinationId=' + ${dashboardExaminationHolder.ExaminationId}} + '&organizationId=1'"><span
+								class="badge rounded-pill bg-secondary">MVP</span>
+							</a> 
+							<a th:href="@{'/dashboard/getPeakExaminationsPaperList?examinationId=' + ${dashboardExaminationHolder.ExaminationId}} + '&organizationId=5'"><span
+								class="badge rounded-pill bg-secondary">SANGAMNER</span>
+							</a> -->
+
+							<!-- ******* OLD ONE ********  -->
+
+
+
+						</td>
+						<!-- <td th:text="${dashboardExaminationHolder.ExamName}">
+							<a class="card-block stretched-link text-decoration-none" th:href="@{/dashboard/getPeakExaminationsPaperList}"></a>
+						</td> -->
+						<td th:text="${dashboardExaminationHolder.TotalUniqueAttendees}"></td>
+						<td th:text="${dashboardExaminationHolder.TotalAttendees}"></td>
+					</tr>
+
+				</tbody>
+			</table>
+		
+		
+		
+		</div>
+
+			
+
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>
